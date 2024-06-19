@@ -1,0 +1,21 @@
+# AI Music Generation with Streamlit
+
+This project allows users to generate music using a trained AI model. The model is trained on a dataset of MIDI files and uses an LSTM network to generate new music sequences. The application is built using Streamlit for the web interface.
+
+## Setup
+
+### Prerequisites
+
+Ensure you have Python 3.8 or later installed.
+
+### Installation
+
+1. Clone the repository or download the source code.
+   ```sh
+   git clone https://github.com/raufjatoi/ai-music-generation.git
+   cd ai-music-generation
+
+2. Install the required dependencies.
+   ```sh
+   pip install -r requirements.txt
+

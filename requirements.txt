@@ -1,0 +1,6 @@
+streamlit==1.14.0
+numpy==1.23.3
+pandas==1.4.3
+tensorflow==2.9.1
+keras==2.9.0
+music21==6.7.1
