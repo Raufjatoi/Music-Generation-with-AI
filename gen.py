@@ -64,10 +64,12 @@ def generate_notes(model, network_input, pitchnames, n_vocab, total_notes=500):
         pattern = pattern[1:len(pattern)]
 
     return prediction_output
-
 # Function to create MIDI file
 def create_midi(prediction_output, file_path='output.mid'):
     """ Convert the output from the prediction to notes and create a midi file from the notes """
+    output_folder = 'path/to/save/output'  # Replace with your desired folder path
+    full_file_path = os.path.join(output_folder, file_path)
+    
     offset = 0
     output_notes = []
 
@@ -92,10 +94,12 @@ def create_midi(prediction_output, file_path='output.mid'):
 
     midi_stream = stream.Stream(output_notes)
     try:
-        midi_stream.write('midi', fp=file_path)
-        print(f"MIDI file saved to: {file_path}")  # Debugging output
+        midi_stream.write('midi', fp=full_file_path)
+        print(f"MIDI file saved to: {full_file_path}")  # Debugging output
     except Exception as e:
         print(f"Error writing MIDI file: {e}")
+
+# Rest of your script remains unchanged...
 
 # Load model and data
 midi_files = get_all_midi_files('midi_songs')[:10]  # Use only the first ten MIDI files
